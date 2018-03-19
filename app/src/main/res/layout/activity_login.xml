@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.enigma.Login">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:id="@+id/ll1"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/ecotour_logo"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sign In"
+                android:textSize="22dp"
+                android:textAlignment="center"
+                android:layout_marginBottom="20dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@drawable/cal">
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/email_login"
+                    app:met_hideUnderline="true"
+                    app:met_textColorHint="#797979"
+                    android:layout_marginLeft="10dp"
+                    app:met_floatingLabel="none"
+                    android:inputType="textEmailAddress"
+                    android:editable="false"
+                    android:hint="Email"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#797979"/>
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:met_hideUnderline="true"
+                    android:layout_marginLeft="10dp"
+                    app:met_textColorHint="#797979"
+                    app:met_floatingLabel="none"
+                    android:id="@+id/pass_login"
+                    android:inputType="textPassword"
+                    android:editable="false"
+                    android:hint="Password"/>
+            </LinearLayout>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sign In"
+                android:id="@+id/signin_btn"
+                android:layout_marginTop="15dp"
+                android:textColor="#ffffff"
+                android:textSize="16dp"
+                android:background="@color/colorPrimary"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="FORGOT PASSWORD?"
+                android:textSize="12dp"
+                android:layout_marginTop="20dp"
+                android:textAlignment="center"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="20dp">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/facebook_login"
+                    android:src="@drawable/facebook_circle"
+                    android:layout_marginRight="20dp"/>
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/googleBtn"
+                    android:src="@drawable/google_circle"
+                    android:layout_marginRight="20dp"/>
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/twitter_circle"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Don't have an Account?"
+                android:textSize="12dp"
+                android:layout_marginTop="15dp"
+                android:textAlignment="center"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="REGISTER NOW"
+                android:id="@+id/btn_reg_link"
+                android:textColor="@color/colorAccent"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/cal"
+                />
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
