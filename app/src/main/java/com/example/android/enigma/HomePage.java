@@ -16,15 +16,13 @@ public class HomePage extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        setContentView(R.layout.activity_home_page_final);
+        Toolbar toolbar = findViewById(R.id.toolbar);
 
+        setContentView(R.layout.activity_home_page_final);
 
 
         try {
@@ -33,19 +31,18 @@ public class HomePage extends AppCompatActivity
             ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                     this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
 
+
             drawer.addDrawerListener((DrawerLayout.DrawerListener) toolbar);
             toggle.syncState();
 
-            NavigationView navigationView =  findViewById(R.id.nav_view);
+            NavigationView navigationView = findViewById(R.id.nav_view);
             navigationView.setNavigationItemSelectedListener(this);
 
-        }
-        catch (NullPointerException e){
+        } catch (NullPointerException e) {
             e.printStackTrace();
         }
 
     }
-
 
 
     @Override
@@ -88,30 +85,32 @@ public class HomePage extends AppCompatActivity
         int id = item.getItemId();
 
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-    public void onProfClick(View v){
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+
+    public void onProfClick(View v) {
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         startActivity(new Intent(HomePage.this, profile.class));
     }
-    public void onFeedbackClick(View v){
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+
+    public void onFeedbackClick(View v) {
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         startActivity(new Intent(HomePage.this, feedback.class));
     }
 
-    public void onShareClick(View v){
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+    public void onShareClick(View v) {
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         Intent share = new Intent(Intent.ACTION_SEND);
 
         share.setType("text/plain");
-        share.putExtra(Intent.EXTRA_TEXT,"Ecotour Application exploring India with Ease.\n Visit us at https://drive.google.com/file/d/0B13_VGdM2-QCWkxRTldCdFd4QU0/view?usp=sharing \n ");
+        share.putExtra(Intent.EXTRA_TEXT, "Ecotour Application exploring India with Ease.\n Visit us at https://drive.google.com/file/d/0B13_VGdM2-QCWkxRTldCdFd4QU0/view?usp=sharing \n ");
 
-        startActivity(Intent.createChooser(share,"Enigma"));
+        startActivity(Intent.createChooser(share, "Enigma"));
 
 
     }

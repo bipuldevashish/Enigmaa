@@ -22,7 +22,7 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/activity_wildlife_page"/>
+    <include layout="@layout/activity_home_page_final"/>
 
 
     <android.support.v4.widget.DrawerLayout
