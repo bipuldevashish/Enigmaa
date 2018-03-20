@@ -91,9 +91,8 @@ public class SignUp extends AppCompatActivity {
                 });
             }
         });
+
         googleSignupbtn=(ImageView)findViewById(R.id.googleSignupBtn);
-
-
         googleSignupbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

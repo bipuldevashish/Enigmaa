@@ -48,14 +48,14 @@ public class Login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        btnRegister=(Button)findViewById(R.id.btn_reg_link);
-        LoginBtn=(Button)findViewById(R.id.signin_btn);
+        btnRegister=findViewById(R.id.btn_reg_link);
+        LoginBtn=findViewById(R.id.signin_btn);
 
-        email=(EditText)findViewById(R.id.email_login);
-        password=(EditText)findViewById(R.id.pass_login);
+        email=findViewById(R.id.email_login);
+        password=findViewById(R.id.pass_login);
         firebaseAuth=FirebaseAuth.getInstance();
 
-        googlebtn=(ImageView)findViewById(R.id.googleBtn);
+        googlebtn=findViewById(R.id.googleBtn);
 
 
         googlebtn.setOnClickListener(new View.OnClickListener() {
