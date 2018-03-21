@@ -39,14 +39,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".HomePage">
-
-        </activity>
         <activity android:name=".SignUp" />
-        <activity android:name=".Wildlife_drawer"
-          >
-
-        </activity>
+        <activity android:name=".Wildlife_drawer" />
         <activity android:name=".Individual" />
         <activity android:name=".socio_conomic" />
 
@@ -70,6 +64,12 @@
                 <data android:scheme="@string/fb_login_protocol_scheme" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Nav_drawer"
+            android:label="@string/title_activity_nav_drawer"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".profile" />
+        <activity android:name=".MainActivity"></activity>
     </application>
 
 </manifest>

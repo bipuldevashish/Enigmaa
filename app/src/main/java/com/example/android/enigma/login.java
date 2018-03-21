@@ -91,7 +91,7 @@ public class Login extends AppCompatActivity {
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             progressDialog.dismiss();
                             if(task.isSuccessful()){
-                                startActivity(new Intent(Login.this,HomePage.class));
+                                startActivity(new Intent(Login.this,Nav_drawer.class));
                             }
                             else{
                                 email.setText("");
@@ -114,7 +114,7 @@ public class Login extends AppCompatActivity {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 if(firebaseAuth.getCurrentUser()!=null){
-                    startActivity(new Intent(Login.this,HomePage.class));
+                    startActivity(new Intent(Login.this,Nav_drawer.class));
                 }
             }
         };

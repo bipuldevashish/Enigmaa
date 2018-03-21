@@ -16,5 +16,10 @@
     <string name="title_activity_individual">Individual</string>
     <string name="title_activity_maps">Map</string>
     <string name="title_activity_xxxxxxxxxx">xxxxxxxxxx</string>
+    <string name="title_activity_nav_drawer">Nav_drawer</string>
+
+    <string name="title_activity_details">DetailsActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 
 </resources>

@@ -180,8 +180,6 @@ public class Individual extends AppCompatActivity {
             }
         });
         //for displaying profile photo
-        String url=firebaseAuth.getCurrentUser().getPhotoUrl().toString();
-        Picasso.with(Individual.this).load(url).into(imgprofpik);
 
         final FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
